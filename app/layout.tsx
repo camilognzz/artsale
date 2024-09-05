@@ -8,6 +8,8 @@ import { Providers } from "./providers";
 import { siteConfig } from "@/config/site";
 import { fontSans } from "@/config/fonts";
 import { Navbar } from "@/components/navbar";
+import Galeria from "./galeria/page";
+import Eventos from "./eventos/page";
 
 export const metadata: Metadata = {
   title: {
@@ -46,6 +48,8 @@ export default function RootLayout({
             <Navbar />
             <main className="container mx-auto max-w-7xl pt-16 px-6 flex-grow">
               {children}
+             <Galeria/>
+             <Eventos/>
             </main>
             <footer className="w-full flex items-center justify-center py-3">
               <Link
