@@ -1,6 +1,6 @@
 "use client"
-import { Event } from "@/app/domainevent/entities/Event";
-import { IEventProps } from "../dtosevent";
+import { Event } from "@/app/domain/entities/Event";
+import { IEventProps } from "../dtos"; 
 import React, { useEffect, useState } from "react";
 import ItemEvent from "./ItemEvent";
 import { EventCardProps, IEvent } from "./dtos";

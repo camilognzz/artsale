@@ -1,4 +1,4 @@
-import { Event } from "@/app/domainevent/entities/Event";
+import { Event } from "@/app/domain/entities/Event";
 
 export interface IEvent {
     dataSource: Event[];

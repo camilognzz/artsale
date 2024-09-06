@@ -10,6 +10,7 @@ import { fontSans } from "@/config/fonts";
 import { Navbar } from "@/components/navbar";
 import Galeria from "./galeria/page";
 import Eventos from "./eventos/page";
+import Artistaa from "./artist/page";
 
 export const metadata: Metadata = {
   title: {
@@ -50,6 +51,7 @@ export default function RootLayout({
               {children}
              <Galeria/>
              <Eventos/>
+             <Artistaa/>
             </main>
             <footer className="w-full flex items-center justify-center py-3">
               <Link

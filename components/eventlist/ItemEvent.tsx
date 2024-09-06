@@ -1,4 +1,4 @@
-import { Event } from "@/app/domainevent/entities/Event";
+import { Event } from "@/app/domain/entities/Event";
 import { EventCardProps } from "./dtos";
 import { Image } from "@nextui-org/react";
 
