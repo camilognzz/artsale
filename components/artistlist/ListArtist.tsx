@@ -1,64 +1,69 @@
-"use client"
+"use client";
 
-import { useEffect, useState } from "react";
-import { images } from "../Artist/constants";
+import { use, useEffect, useState } from "react";
+import { artistes, URL_DEFAULT_IMAGE } from "./contasts";
 import Image from "next/image";
 import ItemArtist from "./ItemArtist";
+import { Artist } from "@/app/domain/entities/Artist";
+import { IListArtistProps } from "./dtos";
 
-const ListArtist = () => {
-    const [activeImage, setActiveImage] = useState(0);
+const ListArtist = (props: IListArtistProps) => {
+  const [activeIndexArtist, setActiveIndexArtist] = useState(0);
+  const [artist, setArtist] = useState<Artist>(artistes[0]);
+  const [autoPlay, setAutoPlay] = useState<boolean>(true);
 
-    const clickNext = () => {
-        activeImage === images.length - 1
-          ? setActiveImage(0)
-          : setActiveImage(activeImage + 1);
+  const clickNext = () => {
+    activeIndexArtist === artistes.length - 1
+      ? setActiveIndexArtist(0)
+      : setActiveIndexArtist(activeIndexArtist + 1);
+  };
+  const clickPrev = () => {
+    activeIndexArtist === 0
+      ? setActiveIndexArtist(artistes.length - 1)
+      : setActiveIndexArtist(activeIndexArtist - 1);
+  };
+
+  useEffect(() => {
+    if (autoPlay) {
+      const timer = setTimeout(() => {
+        clickNext();
+      }, 5000);
+      return () => {
+        clearTimeout(timer);
       };
-      const clickPrev = () => {
-        activeImage === 0
-          ? setActiveImage(images.length - 1)
-          : setActiveImage(activeImage - 1);
-      };
-    
-      useEffect(() => {
-        const timer = setTimeout(() => {
-          clickNext();
-        }, 5000);
-        return () => {
-          clearTimeout(timer);
-        };
-      }, [activeImage]);
+    }
+  }, [activeIndexArtist, autoPlay]);
 
-      return (
-        <main className="grid place-items-center md:grid-cols-2 grid-cols-1 w-full mx-auto max-w-5xl shadow-2xl rounded-2xl">
-          <div
-            className={`w-full flex justify-center items-center gap-4 transition-transform ease-in-out duration-500 md:rounded-2xl p-6 md:p-0`}
-          >
-            {images.map((elem, idx) => (
-              <div
-                key={idx}
-                className={`${
-                  idx === activeImage
-                    ? "block w-full h-[80vh] object-cover transition-all duration-500 ease-in-out"
-                    : "hidden"
-                }`}
-              >
-                <Image
-                  src={elem.src}
-                  alt=""
-                  width={400}
-                  height={400}
-                  className="w-full h-full object-cover md:rounded-tl-3xl md:rounded-bl-3xl"
-                />
-              </div>
-            ))}
-          </div>
-          <ItemArtist
-            activeImage={activeImage}
-            clickNext={clickNext}
-            clickPrev={clickPrev}
-          />
-        </main>
-      );
-    };
-    
+  useEffect(() => {
+    setArtist(artistes[activeIndexArtist]);
+  }, [activeIndexArtist]);
+
+  useEffect(() => {
+    if (typeof props.autoPlay != "undefined") setAutoPlay(props.autoPlay);
+  }, [props.autoPlay]);
+
+  return (
+    <div className="relative">
+      <ItemArtist
+        artist={artist}
+      />
+      <div className="absolute md:bottom-1 bottom-10 right-10 md:right-0 w-full flex justify-center items-center">
+        <div
+          className="absolute bottom-2 right-10 cursor-pointer"
+          onClick={clickPrev}
+        >
+          <img src="/left.svg" alt="" />
+        </div>
+
+        <div
+          className="absolute bottom-2 right-2 cursor-pointer"
+          onClick={clickNext}
+        >
+          <img src="/right.svg" alt="" />
+        </div>
+      </div>
+    </div>
+  );
+};
+
 export default ListArtist;

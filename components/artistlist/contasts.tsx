@@ -1,6 +1,6 @@
 import { Artist } from "@/app/domain/entities/Artist";
 
-export const images: Artist[] = [
+export const artistes: Artist[] = [
     {
       id: 1,
       thumbnail: "/images/artista1.jpg",
@@ -33,3 +33,4 @@ export const images: Artist[] = [
     },
   ];
   
+export const URL_DEFAULT_IMAGE = "/images/artista1.jpg";

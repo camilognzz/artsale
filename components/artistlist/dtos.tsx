@@ -1,4 +1,5 @@
 import { Artist } from "@/app/domain/entities/Artist"
+import { MouseEventHandler } from "react";
 
  
 
@@ -8,7 +9,8 @@ export interface IArtist {
 
 export interface ArtistCardProps {
     artist: Artist;
-    activeImage: any;
-    clickNext: any;
-    clickPrev: any;
+}
+
+export interface IListArtistProps {
+    autoPlay?: boolean;
 }

@@ -10,7 +10,8 @@ import { fontSans } from "@/config/fonts";
 import { Navbar } from "@/components/navbar";
 import Galeria from "./galeria/page";
 import Eventos from "./eventos/page";
-import Artistaa from "./artist/page";
+import Artista from "./artista/page";
+import Contacto from "./contacto/page";
 
 export const metadata: Metadata = {
   title: {
@@ -47,12 +48,13 @@ export default function RootLayout({
         <Providers themeProps={{ attribute: "class", defaultTheme: "light" }}>
           <div className="relative flex flex-col h-screen">
             <Navbar />
-            <main className="container mx-auto max-w-7xl pt-16 px-6 flex-grow">
+            <main className="w-full  px-6 flex-grow">
               {children}
              <Galeria/>
              <Eventos/>
-             <Artistaa/>
+             <Artista/>
             </main>
+            <Contacto/>
             <footer className="w-full flex items-center justify-center py-3">
               <Link
                 isExternal
