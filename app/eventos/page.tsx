@@ -1,48 +1,44 @@
-import { Event } from "../domain/entities/Event"; 
+import { Event } from "../domain/entities/Event";
 import ListEvent from "@/components/eventlist/ListEvent";
 
-
 const Eventos = () => {
-    const dataSource: Event[] = [
-        {
-            id: 1,
-            date: "2024-09-15",
-            title: "Evento de Arte",
-            description: "Un evento increíble sobre arte.",
-            thumbnail: "/images/cuadro1.png",
-          },
-          {
-            id: 2,
-            date: "2024-10-05",
-            title: "Conferencia de Diseño",
-            description: "Explora las últimas tendencias en diseño.",
-            thumbnail: "/images/cuadro1.png",
-          },
-          {
-            id: 3,
-            date: "2024-10-05",
-            title: "Conferencia de Diseño",
-            description: "Explora las últimas tendencias en diseño.",
-            thumbnail: "/images/cuadro1.png",
-          },
-    ];
+  const dataSource: Event[] = [
+    {
+      id: 1,
+      date: "Nov 15, 2024",
+      title: "Reflejos Urbanos",
+      description: "Instalación que usa video mapping en edificios históricos para explorar la relación entre humanos y ciudades a través de luz y sonido.",
+      thumbnail: "/images/evento-1.jpg",
+    },
+    {
+      id: 2,
+      date: "Dic 1, 2024",
+      title: "Cuerpos en Movimiento",
+      description: "Exposición colectiva que presenta esculturas, pinturas y performances que exploran la identidad y la corporalidad en el arte contemporáneo.",
+      thumbnail: "/images/evento-2.jpg",
+    },
+    {
+      id: 3,
+      date: "Mayo 10, 2025",
+      title: "Naturaleza reinventada",
+      description: "Exposición con instalaciones, esculturas y fotos que exploran la relación entre humanos y naturaleza, usando materiales naturales y reflexión ambiental.",
+      thumbnail: "/images/evento-3.png",
+    },
+  ];
 
-    return (
-        <div className="container mx-auto px-4 py-8">
+  return (
+    <div className="container mx-auto px-4 py-8">
       <div className="titulo">
-        <h4 className="font-bold text-center text-4xl">
+        <h4 className="font-bold text-center text-5xl">
           {"Reserva entradas para"}
         </h4>
-        
-        <h2 className="text-center stroke-black  text-4xl mt-1 texto-borde">
-          próximos eventos
-        </h2>
+        <h2 className="contorno text-center text-5xl mt-1">próximos eventos</h2>
       </div>
       <div className="mt-5">
-      <ListEvent dataSource={dataSource} />
+        <ListEvent dataSource={dataSource} />
       </div>
-      </div>
-    )
-}
+    </div>
+  );
+};
 
 export default Eventos;
