@@ -2,7 +2,6 @@
 
 import { use, useEffect, useState } from "react";
 import { artistes, URL_DEFAULT_IMAGE } from "./contasts";
-import Image from "next/image";
 import ItemArtist from "./ItemArtist";
 import { Artist } from "@/app/domain/entities/Artist";
 import { IListArtistProps } from "./dtos";
@@ -44,9 +43,7 @@ const ListArtist = (props: IListArtistProps) => {
 
   return (
     <div className="relative">
-      <ItemArtist
-        artist={artist}
-      />
+      <ItemArtist artist={artist} />
       <div className="absolute md:bottom-1 bottom-10 right-10 md:right-0 w-full flex justify-center items-center">
         <div
           className="absolute bottom-2 right-10 cursor-pointer"
@@ -54,7 +51,6 @@ const ListArtist = (props: IListArtistProps) => {
         >
           <img src="/left.svg" alt="" />
         </div>
-
         <div
           className="absolute bottom-2 right-2 cursor-pointer"
           onClick={clickNext}

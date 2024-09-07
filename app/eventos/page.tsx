@@ -7,21 +7,24 @@ const Eventos = () => {
       id: 1,
       date: "Nov 15, 2024",
       title: "Reflejos Urbanos",
-      description: "Instalación que usa video mapping en edificios históricos para explorar la relación entre humanos y ciudades a través de luz y sonido.",
+      description:
+        "Instalación que usa video mapping en edificios históricos para explorar la relación entre humanos y ciudades a través de luz y sonido.",
       thumbnail: "/images/evento-1.jpg",
     },
     {
       id: 2,
       date: "Dic 1, 2024",
       title: "Cuerpos en Movimiento",
-      description: "Exposición colectiva que presenta esculturas, pinturas y performances que exploran la identidad y la corporalidad en el arte contemporáneo.",
+      description:
+        "Exposición colectiva que presenta esculturas, pinturas y performances que exploran la identidad y la corporalidad en el arte contemporáneo.",
       thumbnail: "/images/evento-2.jpg",
     },
     {
       id: 3,
-      date: "Mayo 10, 2025",
+      date: "May 10, 2025",
       title: "Naturaleza reinventada",
-      description: "Exposición con instalaciones, esculturas y fotos que exploran la relación entre humanos y naturaleza, usando materiales naturales y reflexión ambiental.",
+      description:
+        "Exposición con instalaciones, esculturas y fotos que exploran la relación entre humanos y naturaleza, usando materiales naturales y reflexión ambiental.",
       thumbnail: "/images/evento-3.png",
     },
   ];

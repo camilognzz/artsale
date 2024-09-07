@@ -11,13 +11,14 @@ const ItemArtist = ({ artist }: ArtistCardProps) => {
     let timeout = setTimeout(() => {
       setMounted(true);
       clearTimeout(timeout);
-    }, 1000) 
+    }, 1000);
     return () => {
       setMounted(false);
     };
   }, [artist.id]);
+
   return (
-    <div className="grid place-items-center md:grid-cols-2 grid-cols-1 w-full mx-auto max-w-5xl shadow-2xl rounded-2xl">
+    <div className="grid place-items-center md:grid-cols-2 grid-cols-1 w-full mx-auto max-w-5xl shadow-2xl rounded-2xl mt-3 mb-3">
       <div className="block w-full h-[80vh] object-cover transition-all duration-500 ease-in-out">
         <Image
           src={artist.thumbnail || URL_DEFAULT_IMAGE}
@@ -27,32 +28,26 @@ const ItemArtist = ({ artist }: ArtistCardProps) => {
           className="w-full h-full object-cover md:rounded-tl-3xl md:rounded-bl-3xl"
         />
       </div>
-      <div className="block w-full h-full md:h-[80vh] py-20 md:px-20 px-10 text-left relative">
-        {mounted && <motion.div
-          initial={{
-            opacity: 0,
-            scale: 0.5,
-          }}
-          animate={{
-            opacity: 1,
-            scale: 1,
-          }}
-          transition={{
-            ease: "linear",
-            duration: 2,
-            x: { duration: 1 },
-          }}
-          className="w-full"
-        >
-          <div className="py-16 text-5xl font-extrabold">{artist.name}</div>
-          <div className="description leading-relaxed font-medium text-base tracking-wide h-60 md:h-40 italic text-gray-600">
-            {artist.description}
-          </div>
-        </motion.div>}
-        
-        {mounted && <button className="bg-[#ecae7e] text-white uppercase px-4 py-2 rounded-md my-10">
-          Ver más
-        </button>}
+      <div className="bg-rose-100 block w-full h-full md:h-[80vh] py-10 md:px-20 px-10 text-left relative">
+        {mounted && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ ease: "linear", duration: 0 }}
+            className="w-full"
+          >
+            <div className="py-8 text-5xl font-extrabold">{artist.name}</div>
+            <div className="description leading-relaxed font-medium text-base tracking-wide h-60 md:h-40 italic text-gray-600">
+              {artist.description}
+            </div>
+          </motion.div>
+        )}
+
+        {mounted && (
+          <button className="bg-rose-600 text-white uppercase px-4 py-2 rounded-md my-10 hover:bg-rose-400">
+            Ver más
+          </button>
+        )}
         <style jsx>
           {`
             .description {
