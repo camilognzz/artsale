@@ -1,26 +1,27 @@
-import Image from 'next/image';
+import Image from "next/image";
 
 const Contacto = () => {
   return (
-    <div className="bg-[#d1a27f] w-full py-6 flex flex-col md:flex-row justify-between items-center px-4">
+    <div className="bg-[#F4BC44] w-full py-6 flex flex-col md:flex-row justify-between items-center px-1">
       {/* Contenedor para el texto */}
-      <div className="w-full md:w-1/3 text-black flex justify-center mb-4 md:mb-0">
-        <div className="overflow-hidden h-24 text-center">
+      <div className="w-full md:w-1/3 text-black flex justify-end mb-4 md:mb-0">
+        <div className="h-auto text-center flex items-center justify-end overflow-hidden">
           <p
+            className="line-clamp-3 text-black font-bold"
             style={{
-              fontSize: '1.25rem', // Tamaño reducido del texto para pantallas pequeñas
-              lineHeight: '1.4', // Ajusta la altura de línea para que el texto se vea bien
+              fontSize: "1.75rem", // Tamaño reducido
+              lineHeight: "1.4",
+              maxWidth: "100%",
             }}
-            className="line-clamp-3"
           >
             Suscríbete a nuestro{" "}
             <span
               style={{
-                color: 'transparent',
-                WebkitTextStroke: '1px black', // Borde negro alrededor de las letras
-                fontWeight: 'bold',
-                fontSize: '1.25rem', // Tamaño igual para el texto con borde
-                letterSpacing: '-0.02em', // Ajuste menor del espaciado entre letras
+                color: "transparent",
+                WebkitTextStroke: "1px black",
+                fontWeight: "bold",
+                fontSize: "1.75rem",
+                letterSpacing: "-0.02em",
               }}
             >
               boletín para recibir
@@ -30,25 +31,27 @@ const Contacto = () => {
         </div>
       </div>
 
-      {/* Input y botón */}
-      <div className="w-full md:w-1/3 flex flex-col md:flex-row items-center mb-4 md:mb-0">
-        <input
-          type="email"
-          placeholder="your email"
-          className="p-2 text-sm rounded-l-lg w-full md:w-3/4 outline-none bg-[#d1a27f] text-black placeholder-black border-b border-black border-opacity-30 focus:border-opacity-100 transition mb-2 md:mb-0"
-        />
-        <button className="bg-[#d1a27f] text-black border-b border-black p-1 text-xs rounded-r-lg hover:bg-white hover:text-black transition whitespace-nowrap w-full md:w-auto">
-          Suscríbete now
-        </button>
+      {/* Input y botón centrado */}
+      <div className="w-full md:w-2/3 flex flex-col md:flex-row justify-center items-center mb-4 md:mb-0">
+        <div className="w-full md:w-2/3 flex flex-row justify-center">
+          <input
+            type="email"
+            placeholder="your email"
+            className="p-2 text-sm rounded-l-lg w-full outline-none bg-[#F4BC44] text-black placeholder-black border-b border-black border-opacity-30 focus:border-opacity-100 transition mb-2 md:mb-0"
+          />
+          <button className="bg-[#F4BC44] text-black border-black p-2 text-sm hover:bg-rose-600 hover:text-black transition whitespace-nowrap w-full md:w-auto rounded-none border-b">
+            Suscríbete now
+          </button>
+        </div>
       </div>
 
       {/* Imagen */}
-      <div className="w-full md:w-1/3 flex justify-center">
+      <div className="w-full md:w-1/3 flex justify-start">
         <Image
-          src="/images/page-principal.png"
+          src="/images/contacto-1.png"
           alt="Boletín"
-          width={100} // Tamaño reducido de la imagen para pantallas pequeñas
-          height={100}
+          width={150}
+          height={150}
           className="object-cover"
         />
       </div>

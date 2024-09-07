@@ -19,7 +19,6 @@ const ItemArtist = ({ artist }: ArtistCardProps) => {
 
   return (
     <div className="grid place-items-center md:grid-cols-2 grid-cols-1 w-full mx-auto max-w-5xl shadow-2xl rounded-2xl mt-3 mb-3">
-      {/* Imagen ajustada para ser responsiva */}
       <div className="block w-full h-[60vh] md:h-[80vh] object-cover transition-all duration-500 ease-in-out">
         <Image
           src={artist.thumbnail || URL_DEFAULT_IMAGE}
@@ -29,7 +28,6 @@ const ItemArtist = ({ artist }: ArtistCardProps) => {
           className="w-full h-full object-cover md:rounded-tl-3xl md:rounded-bl-3xl"
         />
       </div>
-      {/* Contenedor de texto responsivo */}
       <div className="bg-rose-100 block w-full h-full md:h-[80vh] py-10 md:py-20 md:px-20 px-8 text-left relative">
         {mounted && (
           <motion.div
@@ -38,13 +36,14 @@ const ItemArtist = ({ artist }: ArtistCardProps) => {
             transition={{ ease: "linear", duration: 0 }}
             className="w-full"
           >
-            <div className="py-6 text-3xl md:text-5xl font-extrabold">{artist.name}</div>
+            <div className="py-6 text-3xl md:text-5xl font-extrabold">
+              {artist.name}
+            </div>
             <div className="description leading-relaxed font-medium text-base md:text-lg tracking-wide h-60 md:h-40 italic text-gray-600">
               {artist.description}
             </div>
           </motion.div>
         )}
-
         {mounted && (
           <button className="bg-rose-600 text-white uppercase px-4 py-2 rounded-md mt-6 md:my-10 hover:bg-rose-400">
             Ver más
