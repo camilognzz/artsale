@@ -31,7 +31,7 @@ export default function Home() {
           </p>
           <div>
             <Button
-              className="bg-rose-600 text-white py-2 px-4 md:py-3 md:px-6"
+              className="bg-rose-600 text-white py-2 px-4 md:py-3 md:px-6 dark:bg-blue-900 dark:text-[#ECEDEE] dark:hover:bg-blue-800"
               size="md"
               radius="lg"
               variant="shadow"

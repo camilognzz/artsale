@@ -51,7 +51,7 @@ const Galeria = () => {
           ¡Elige tu preferida!
         </h2>
       </div>
-      <div className="mt-5">
+      <div className="mt-6">
         <CardList dataSource={dataSource} />
       </div>
     </div>

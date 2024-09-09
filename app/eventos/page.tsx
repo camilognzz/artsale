@@ -35,9 +35,9 @@ const Eventos = () => {
         <h4 className="font-bold text-center text-5xl">
           {"Reserva entradas para"}
         </h4>
-        <h2 className="contorno text-center text-5xl mt-1">próximos eventos</h2>
+        <h2 className="contorno font-bold text-center text-5xl mt-1">próximos eventos</h2>
       </div>
-      <div className="mt-5">
+      <div className="mb-4">
         <ListEvent dataSource={dataSource} />
       </div>
     </div>

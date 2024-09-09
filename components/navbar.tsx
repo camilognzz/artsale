@@ -18,8 +18,10 @@ import { Logo } from "@/components/icons";
 export const Navbar = () => {
   return (
     <NextUINavbar maxWidth="xl" position="sticky">
-      <Logo />
-      <p className="font-bold text-inherit">ArtSale</p>
+      <p className="font-bold text-inherit flex flex-col items-center leading-none border border-black dark:border-[#ECEDEE] p-2">
+        <span>Art</span>
+        <span>Sale</span>
+      </p>
       <NavbarContent className="basis-1/5 sm:basis-full" justify="center">
         <NavbarBrand as="li" className="gap-3 max-w-fit">
           <NextLink
@@ -27,7 +29,6 @@ export const Navbar = () => {
             href="/"
           ></NextLink>
         </NavbarBrand>
-        {/* Menu visible en pantallas de 640px o más */}
         <ul className="hidden md:flex gap-4 justify-start ml-2">
           {siteConfig.navItems.map((item) => (
             <NavbarItem key={item.href} className="group">
@@ -55,12 +56,10 @@ export const Navbar = () => {
           <ThemeSwitch />
         </NavbarItem>
       </NavbarContent>
-      {/* Mostrar el botón de menú hamburguesa en pantallas menores de 640px */}
       <NavbarContent className="md:hidden flex basis-1 pl-4" justify="end">
         <ThemeSwitch />
         <NavbarMenuToggle />
       </NavbarContent>
-      {/* Mostrar el menú desplegable en pantallas menores de 640px */}
       <NavbarMenu className="md:hidden">
         <div className="mx-4 mt-2 flex flex-col gap-2">
           {siteConfig.navMenuItems.map((item, index) => (

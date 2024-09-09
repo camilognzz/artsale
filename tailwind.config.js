@@ -68,7 +68,13 @@ module.exports = {
           },
         },
         dark: {
-          // ...
+          colors: {
+            white: "#E0E0E0",
+            black: "#121212",
+            background: "#181818",
+            primary: "#F4BC44",
+            secondary: "#B0B0B0",
+          },
         },
       },
     }),

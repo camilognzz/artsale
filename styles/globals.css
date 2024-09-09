@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 
+
 .titulo{
     max-width: 1400px;
     padding: 0 2rem;
@@ -15,7 +16,7 @@
     font-weight: bold;
   }
 
-  .contorno {
-    color: transparent; /* Hace el texto interior transparente */
-    -webkit-text-stroke: 2px black; /* Añade el borde negro al texto */
-  }
+ /*  .contorno {
+    color: transparent; 
+    -webkit-text-stroke: 2px black; 
+  }*/

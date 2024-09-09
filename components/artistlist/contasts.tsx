@@ -17,7 +17,7 @@ export const artistes: Artist[] = [
       id: 3,
       thumbnail: "/images/artista-3.jpg",
       name: "Kateryna Ocheredko",
-      description: "Artista visual que se especializa en pinturas y collages abstractos. Su obra destaca por el uso audaz de colores y formas geométricas para explorar emociones y conceptos como la identidad y el espacio",
+      description: "Artista visual que se especializa en pinturas y collages abstractos. Su obra destaca por el uso audaz de colores y formas geométricas para explorar emociones y conceptos como la identidad y el espacio.",
     },
     {
       id: 4,
