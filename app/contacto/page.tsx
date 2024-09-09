@@ -30,22 +30,18 @@ const Contacto = () => {
           </p>
         </div>
       </div>
-
-      {/* Input y botón centrado */}
       <div className="w-full md:w-2/3 flex flex-col md:flex-row justify-center items-center mb-4 md:mb-0">
         <div className="w-full md:w-2/3 flex flex-row justify-center">
           <input
             type="email"
-            placeholder="your email"
+            placeholder="Tu correo"
             className="p-2 text-sm rounded-l-lg w-full outline-none bg-[#F4BC44] text-black placeholder-black border-b border-black border-opacity-30 focus:border-opacity-100 transition mb-2 md:mb-0"
           />
           <button className="bg-[#F4BC44] text-black border-black p-2 text-sm hover:bg-rose-600 hover:text-black transition whitespace-nowrap w-full md:w-auto rounded-none border-b">
-            Suscríbete now
+            Suscríbete ahora
           </button>
         </div>
       </div>
-
-      {/* Imagen */}
       <div className="w-full md:w-1/3 flex justify-start">
         <Image
           src="/images/contacto-1.png"

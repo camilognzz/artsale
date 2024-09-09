@@ -12,6 +12,7 @@ import Galeria from "./galeria/page";
 import Eventos from "./eventos/page";
 import Artista from "./artista/page";
 import Contacto from "./contacto/page";
+import Footer from "@/components/footer";
 
 export const metadata: Metadata = {
   title: {
@@ -55,17 +56,7 @@ export default function RootLayout({
              <Artista/>
             </main>
             <Contacto/>
-            <footer className="w-full flex items-center justify-center py-3">
-              <Link
-                isExternal
-                className="flex items-center gap-1 text-current"
-                href="https://nextui-docs-v2.vercel.app?utm_source=next-app-template"
-                title="nextui.org homepage"
-              >
-                <span className="text-default-600">Powered by</span>
-                <p className="text-primary">NextUI</p>
-              </Link>
-            </footer>
+            <Footer/>
           </div>
         </Providers>
       </body>
