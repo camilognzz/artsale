@@ -66,7 +66,7 @@ const Footer = () => {
       </div>
       <div className="bg-[#121212]">
         <p className="text-center py-4 text-sm text-gray-400">
-          Powered by{' '}
+          Powered by{" "}
           <a
             href="https://www.linkedin.com/in/camilognzz1"
             target="_blank"
