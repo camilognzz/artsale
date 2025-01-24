@@ -34,7 +34,6 @@ const ItemArtist = ({ artist }: ArtistCardProps) => {
         {mounted && (
           <motion.div
             animate={{ opacity: 1 }}
-            className="w-full"
             initial={{ opacity: 0 }}
             transition={{ ease: "linear", duration: 0 }}
           >

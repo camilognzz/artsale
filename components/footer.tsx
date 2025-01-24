@@ -64,6 +64,19 @@ const Footer = () => {
           </ul>
         </div>
       </div>
+      <div className="bg-[#121212]">
+        <p className="text-center py-4 text-sm text-gray-400">
+          Powered by{' '}
+          <a
+            href="https://www.linkedin.com/in/camilognzz1"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-slate-100 hover:underline"
+          >
+            Camilognzz
+          </a>
+        </p>
+      </div>
     </div>
   );
 };
