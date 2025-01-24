@@ -47,7 +47,5 @@ export const siteConfig = {
       href: "/contacto",
     },
   ],
-  links: {
-    
-  },
+  links: {},
 };

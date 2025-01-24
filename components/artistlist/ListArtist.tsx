@@ -1,10 +1,12 @@
 "use client";
 
-import { use, useEffect, useState } from "react";
-import { artistes, URL_DEFAULT_IMAGE } from "./contasts";
+import { useEffect, useState } from "react";
+
+import { artistes } from "./contasts";
 import ItemArtist from "./ItemArtist";
-import { Artist } from "@/app/domain/entities/Artist";
 import { IListArtistProps } from "./dtos";
+
+import { Artist } from "@/app/domain/entities/Artist";
 
 const ListArtist = (props: IListArtistProps) => {
   const [activeIndexArtist, setActiveIndexArtist] = useState(0);
@@ -27,6 +29,7 @@ const ListArtist = (props: IListArtistProps) => {
       const timer = setTimeout(() => {
         clickNext();
       }, 5000);
+
       return () => {
         clearTimeout(timer);
       };
@@ -45,18 +48,20 @@ const ListArtist = (props: IListArtistProps) => {
     <div className="relative">
       <ItemArtist artist={artist} />
       <div className="absolute md:bottom-1 bottom-10 right-10 md:right-0 w-full flex justify-center items-center">
-        <div
+        <button
+          aria-label="Anterior"
           className="absolute bottom-2 right-10 cursor-pointer"
           onClick={clickPrev}
         >
-          <img src="/left.svg" alt="" />
-        </div>
-        <div
+          <img alt="Ir a la izquierda" src="/left.svg" />
+        </button>
+        <button
+          aria-label="Siguiente"
           className="absolute bottom-2 right-2 cursor-pointer"
           onClick={clickNext}
         >
-          <img src="/right.svg" alt="" />
-        </div>
+          <img alt="Ir a la derecha" src="/right.svg" />
+        </button>
       </div>
     </div>
   );

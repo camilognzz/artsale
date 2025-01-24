@@ -1,9 +1,9 @@
 import { Paint } from "../../app/domain/entities/Paint";
 
 export interface ICardListProps {
-    dataSource: Paint[]
+  dataSource: Paint[];
 }
 
 export interface ItemCardProps {
-    paint: Paint
+  paint: Paint;
 }

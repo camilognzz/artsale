@@ -1,8 +1,10 @@
 "use client";
-import { Event } from "@/app/domain/entities/Event";
 import React, { useEffect, useState } from "react";
+
 import ItemEvent from "./ItemEvent";
 import { IEvent } from "./dtos";
+
+import { Event } from "@/app/domain/entities/Event";
 
 const ListEvent: React.FC<IEvent> = (props) => {
   const [dataSource, setDataSource] = useState<Event[]>([]);

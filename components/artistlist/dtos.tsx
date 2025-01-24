@@ -1,16 +1,13 @@
-import { Artist } from "@/app/domain/entities/Artist"
-import { MouseEventHandler } from "react";
-
- 
+import { Artist } from "@/app/domain/entities/Artist";
 
 export interface IArtist {
-    dataSource: Artist[];
+  dataSource: Artist[];
 }
 
 export interface ArtistCardProps {
-    artist: Artist;
+  artist: Artist;
 }
 
 export interface IListArtistProps {
-    autoPlay?: boolean;
+  autoPlay?: boolean;
 }

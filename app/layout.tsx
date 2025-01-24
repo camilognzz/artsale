@@ -1,17 +1,16 @@
 import "@/styles/globals.css";
 import { Metadata, Viewport } from "next";
-import { Link } from "@nextui-org/link";
 import clsx from "clsx";
 
 import { Providers } from "./providers";
-
-import { siteConfig } from "@/config/site";
-import { fontSans } from "@/config/fonts";
-import { Navbar } from "@/components/navbar";
 import Galeria from "./galeria/page";
 import Eventos from "./eventos/page";
 import Artista from "./artista/page";
 import Contacto from "./contacto/page";
+
+import { Navbar } from "@/components/navbar";
+import { fontSans } from "@/config/fonts";
+import { siteConfig } from "@/config/site";
 import Footer from "@/components/footer";
 
 export const metadata: Metadata = {
@@ -51,12 +50,12 @@ export default function RootLayout({
             <Navbar />
             <main className="w-full  px-6 flex-grow">
               {children}
-             <Galeria/>
-             <Eventos/>
-             <Artista/>
+              <Galeria />
+              <Eventos />
+              <Artista />
             </main>
-            <Contacto/>
-            <Footer/>
+            <Contacto />
+            <Footer />
           </div>
         </Providers>
       </body>

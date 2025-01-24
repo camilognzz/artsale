@@ -1,6 +1,8 @@
 "use client";
-import { Paint } from "../../app/domain/entities/Paint";
 import React, { useEffect, useState } from "react";
+
+import { Paint } from "../../app/domain/entities/Paint";
+
 import { ICardListProps } from "./dtos";
 import ItemCard from "./ItemCard";
 

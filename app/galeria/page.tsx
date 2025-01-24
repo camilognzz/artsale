@@ -1,6 +1,7 @@
+import React from "react";
+
 import CardList from "@/components/cardlist/CardList";
 import { Paint } from "@/app/domain/entities/Paint";
-import React from "react";
 
 const Galeria = () => {
   const dataSource: Paint[] = [
@@ -41,6 +42,7 @@ const Galeria = () => {
       price: 1.501,
     },
   ];
+
   return (
     <div className="py-12">
       <div className="titulo">

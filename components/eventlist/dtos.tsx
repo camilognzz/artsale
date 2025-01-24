@@ -1,10 +1,10 @@
 import { Event } from "@/app/domain/entities/Event";
 
 export interface IEvent {
-    dataSource: Event[];
-  }
-  
+  dataSource: Event[];
+}
+
 export interface EventCardProps {
-    event: Event;
-    isReversed: boolean;
-  }
+  event: Event;
+  isReversed: boolean;
+}

@@ -11,9 +11,9 @@ import { Link } from "@nextui-org/link";
 import { link as linkStyles } from "@nextui-org/theme";
 import NextLink from "next/link";
 import clsx from "clsx";
+
 import { siteConfig } from "@/config/site";
 import { ThemeSwitch } from "@/components/theme-switch";
-import { Logo } from "@/components/icons";
 
 export const Navbar = () => {
   return (
@@ -27,7 +27,7 @@ export const Navbar = () => {
           <NextLink
             className="flex justify-start items-center gap-1"
             href="/"
-          ></NextLink>
+          />
         </NavbarBrand>
         <ul className="hidden md:flex gap-4 justify-start ml-2">
           {siteConfig.navItems.map((item) => (
@@ -37,7 +37,7 @@ export const Navbar = () => {
                   linkStyles({ color: "foreground" }),
                   "data-[active=true]:text-primary data-[active=true]:font-medium",
                   "hover:text-[#F4BC44]",
-                  "transition-colors duration-300"
+                  "transition-colors duration-300",
                 )}
                 color="foreground"
                 href={item.href}
@@ -69,8 +69,8 @@ export const Navbar = () => {
                   index === 2
                     ? "primary"
                     : index === siteConfig.navMenuItems.length - 1
-                    ? "danger"
-                    : "foreground"
+                      ? "danger"
+                      : "foreground"
                 }
                 href="#"
                 size="lg"

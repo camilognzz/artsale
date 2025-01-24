@@ -1,7 +1,6 @@
 import ListArtist from "@/components/artistlist/ListArtist";
 
 export default function Artista() {
-
   return (
     <main className="w-full min-h-screen mx-auto grid place-items-center">
       <div className="titulo">
@@ -14,4 +13,3 @@ export default function Artista() {
     </main>
   );
 }
-

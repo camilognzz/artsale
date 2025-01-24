@@ -1,7 +1,7 @@
 import { EventCardProps } from "./dtos";
 
 const ItemEvent = ({ event, isReversed }: EventCardProps) => {
-  let { id, date, title, description, thumbnail } = event;
+  let { date, title, description, thumbnail } = event;
 
   return (
     <div className="flex flex-col items-center justify-center">
@@ -13,9 +13,9 @@ const ItemEvent = ({ event, isReversed }: EventCardProps) => {
         <div className="flex-1 md:w-2/3">
           <div className="relative w-full h-[300px]">
             <img
-              src={thumbnail || "/images/cuadro1.png"}
               alt={title}
               className="w-full h-full object-cover"
+              src={thumbnail || "/images/cuadro1.png"}
             />
           </div>
         </div>
@@ -30,8 +30,8 @@ const ItemEvent = ({ event, isReversed }: EventCardProps) => {
             {description}
           </p>
           <a
-            href="#"
             className="text-amber-400 dark:text-amber-300 hover:text-amber-600 dark:hover:text-amber-400 text-sm self-start border-b border-amber-400 dark:border-amber-300 hover:border-amber-600 dark:hover:border-amber-400"
+            href="/eventos"
           >
             Ver más
           </a>

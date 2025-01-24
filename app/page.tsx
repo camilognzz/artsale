@@ -10,19 +10,22 @@ export default function Home() {
           <Link href={"/"}>
             <Image
               isBlurred
-              width={650}
-              height={450}
-              src="/images/page-principal.png"
               alt="Principal Image"
               className="m-5 w-full object-cover rounded-md"
+              height={450}
+              src="/images/page-principal.png"
+              width={650}
             />
           </Link>
         </div>
         <div className="info p-4">
           <div className="title mb-4">
-            <a className="text-2xl md:text-4xl lg:text-5xl font-bold text-gray-800 hover:text-gray-600">
+            <Link
+              className="text-2xl md:text-4xl lg:text-5xl font-bold text-gray-800 hover:text-gray-600"
+              href={"/"}
+            >
               Descubre el Arte que Inspira
-            </a>
+            </Link>
           </div>
           <p className="text-sm md:text-base lg:text-lg text-gray-700 py-3">
             Explora una colección única de obras de arte contemporáneo,
@@ -32,8 +35,8 @@ export default function Home() {
           <div>
             <Button
               className="bg-rose-600 text-white py-2 px-4 md:py-3 md:px-6 dark:bg-blue-900 dark:text-[#ECEDEE] dark:hover:bg-blue-800"
-              size="md"
               radius="lg"
+              size="md"
               variant="shadow"
             >
               Compra ahora

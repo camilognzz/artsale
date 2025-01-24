@@ -1,4 +1,5 @@
 import { Event } from "../domain/entities/Event";
+
 import ListEvent from "@/components/eventlist/ListEvent";
 
 const Eventos = () => {
@@ -35,7 +36,9 @@ const Eventos = () => {
         <h4 className="font-bold text-center text-5xl">
           {"Reserva entradas para"}
         </h4>
-        <h2 className="contorno font-bold text-center text-5xl mt-1">próximos eventos</h2>
+        <h2 className="contorno font-bold text-center text-5xl mt-1">
+          próximos eventos
+        </h2>
       </div>
       <div className="mb-4">
         <ListEvent dataSource={dataSource} />
