@@ -68,7 +68,7 @@ const Footer = () => {
         <p className="text-center py-4 text-sm text-gray-400">
           Powered by{" "}
           <a
-            href="https://www.linkedin.com/in/camilognzz1"
+            href="https://camilogonzalez.vercel.app/"
             target="_blank"
             rel="noopener noreferrer"
             className="text-slate-100 hover:underline"
